@@ -46,7 +46,7 @@ def send_text(message):
         bot.register_next_step_handler(message, get_name)
 
     elif message.text.lower() == "send":
-        with open(f"name.txt", mode="w") as new_file:
+        with open(f"{name}.txt", mode="w") as new_file:
             new_file.write(f"Today's date is: {datetime.datetime.now()}\n"
                            f"{name_question}: {name}\n"
                            f"{question_1}: {answer_1}\n"
